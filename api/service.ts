@@ -35,9 +35,9 @@ const getIncidentsService = (
   req: Request<any>,
   callBack: Function
 ) => {
-  let query = `SELECT incidentId, comments, status, clearedDate, incidentType, severityLevel, accountNumber, customerName, incidentTitle, incidentDescription, assignedTo, createdDate FROM incident`;
+  let query = `SELECT incidentId, comments, status, clearedDate, incidentType, severityLevel, accountNumber, customerName, incidentTitle, incidentDescription, userEmail as assignedTo, createdDate FROM incident LEFT JOIN user ON incident.assignedTo=user.userId`;
   if (incidentId) {
-    query = `SELECT incidentId, comments, status, clearedDate, incidentType, severityLevel, accountNumber, customerName, incidentTitle, incidentDescription, assignedTo, createdDate FROM incident WHERE incidentId=${incidentId}`;
+    query = `SELECT incidentId, comments, status, clearedDate, incidentType, severityLevel, accountNumber, customerName, incidentTitle, incidentDescription, userEmail as assignedTo, createdDate FROM incident LEFT JOIN user ON incident.assignedTo=user.userId WHERE incidentId=${incidentId}`;
   }
   sqlConnection.query(query, [], (error, results, fields) => {
     if (error) {

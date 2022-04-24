@@ -11,6 +11,23 @@ export default class AssignedIncidents extends React.Component<any, any> {
       .get("/api/getIncidents")
       .then((res: any) => {
         console.log(res?.data?.data);
+        if (res.data.data.length) {
+          const userObject = localStorage.getItem("userObject");
+          let userEmail = "";
+          if (userObject) {
+            userEmail = JSON.parse(userObject).userEmail;
+          }
+          let activeIndex = 0;
+          res.data.data.forEach((item: any, index: number) => {
+            if (item.assignedTo === userEmail) {
+              activeIndex = index;
+              return;
+            }
+          });
+          this.setState({
+            activeIndex: activeIndex,
+          });
+        }
         this.setState({
           data: res.data.data,
         });
@@ -27,7 +44,7 @@ export default class AssignedIncidents extends React.Component<any, any> {
       if (userObject) {
         userEmail = JSON.parse(userObject).userEmail;
       }
-      if (incident.userEmail === userEmail) {
+      if (incident.assignedTo === userEmail) {
         return (
           <tr
             key={index}
