@@ -85,7 +85,7 @@ class HomeSection extends React.Component {
         </div>
         <div className={style.sectionTwo}>
           <div className={style.leftSection}>
-            <h1>Angry and sad customers</h1>
+            <h1>Happy customers</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Veritatis cum facere quis eaque tenetur architecto perferendis
