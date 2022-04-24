@@ -1,0 +1,154 @@
+.container {
+  /* display: flex; */
+  width: 100%;
+  box-sizing: border-box;
+}
+.left {
+  width: 350px;
+  background-color: #222d32;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.right {
+  margin-left: 350px;
+  width: calc(100% - 350px);
+  background-color: #ecf0f5;
+  padding: 30px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.left * {
+  color: #fff;
+}
+.leftNavItem {
+  /* color: #db2723; */
+  color: #fff;
+  padding: 15px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.mainNavigationIndicator {
+  background-color: #1a2226;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+.activeNavItem {
+  background-color: black;
+}
+.personaContainer {
+  margin-top: 10px;
+  padding: 20px;
+}
+.leftNavFooter {
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  padding: 20px 20px 20px 20px;
+}
+.header {
+  font-size: 20px;
+}
+.incidentContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+}
+.singleField {
+  margin: 10px;
+}
+.recordDetails {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.recordTittle {
+  font-size: 14px;
+  font-style: italic;
+}
+.detailsWrapper {
+  margin-top: 20px;
+}
+.shimmerWrapper {
+  padding: 5px;
+}
+.areaContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.singleArea {
+  min-width: 300px;
+}
+.singleArea ul {
+  margin-top: 20px;
+}
+.singleArea ul li {
+  margin-bottom: 10px;
+}
+.mapContainer h3 {
+  font-size: 18px;
+}
+.mapListTopContainer {
+  margin-top: 20px;
+}
+.mapListTopContainer h4 {
+  font-size: 16px;
+}
+.cityContainer {
+  margin-top: 35px;
+}
+.areaNameH5 {
+  margin-top: 30px;
+}
+.cityNameH4 {
+  margin-top: 20px;
+}
+.cityContainer h5 {
+  font-size: 14px;
+}
+.mainMapContent {
+  color: #1a2226;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reFinalDetails {
+  margin-top: 40px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.incidentListParent {
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
+.incidentListParent th {
+  background-color: #222d32;
+  color: #fff;
+  font-weight: lighter;
+}
+.incidentListParent table,
+.incidentListParent tr,
+.incidentListParent td,
+.incidentListParent th {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+.incidentListParent td,
+.incidentListParent th {
+  padding: 10px 20px;
+}
+.incidentDetails {
+  margin-bottom: 20px;
+}
+.incidentDetails > div {
+  margin-bottom: 10px;
+}
