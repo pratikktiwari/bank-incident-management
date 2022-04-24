@@ -106,7 +106,7 @@ class Login extends React.Component<any, ILoginState> {
   };
   render(): React.ReactNode {
     const {
-      isAdmin,
+      // isAdmin,
       userEmail,
       userPassword,
       emailError,
