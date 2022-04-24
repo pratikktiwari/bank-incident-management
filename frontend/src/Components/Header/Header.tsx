@@ -4,7 +4,7 @@ import { IoCall } from "react-icons/io5";
 import { IoMailSharp } from "react-icons/io5";
 import { RiHistoryLine } from "react-icons/ri";
 import HeaderNav from "./HeaderNav";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
@@ -20,12 +20,12 @@ class Header extends React.Component {
             technical capabilities, human intervention is needed to ensure
             appropriate and ethical application.
           </p>
-          {/* <div className={style.buttonContainer}>
+          <div className={style.buttonContainer}>
             <Link to="/login">
               <button>Secure Login</button>
             </Link>
-            <button>Log an incident</button>
-          </div> */}
+            {/* <button>Log an incident</button> */}
+          </div>
         </div>
         <div className={style.headerBottom}>
           <div className={style.singleHeaderItem}>
